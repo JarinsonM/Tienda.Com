@@ -1,10 +1,8 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
- */
+
 package Vista;
 
 import java.awt.event.WindowAdapter;
+import javax.swing.JButton;
 
 /**
  *
@@ -19,6 +17,16 @@ public class Nuevo_Usuario extends javax.swing.JPanel {
         initComponents();
     }
 
+    public JButton getBtnOjo() {
+        return btnOjo;
+    }
+
+    public void setBtnOjo(JButton btnOjo) {
+        this.btnOjo = btnOjo;
+    }
+    
+    
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -28,39 +36,225 @@ public class Nuevo_Usuario extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jTextField4 = new javax.swing.JTextField();
+        jPanel1 = new javax.swing.JPanel();
+        lblNuevoUsuario = new javax.swing.JLabel();
+        lblNombre = new javax.swing.JLabel();
+        lblDocumento = new javax.swing.JLabel();
+        lblTelefono = new javax.swing.JLabel();
+        lblSexo = new javax.swing.JLabel();
+        lblDireccion = new javax.swing.JLabel();
+        lblFechadeNacimiento = new javax.swing.JLabel();
+        lblcargo = new javax.swing.JLabel();
+        lblLogin = new javax.swing.JLabel();
+        lblClave = new javax.swing.JLabel();
+        txtNombre = new javax.swing.JTextField();
+        jTextField3 = new javax.swing.JTextField();
+        jTextField5 = new javax.swing.JTextField();
+        cmbSeleccionesuSexo = new javax.swing.JComboBox<>();
+        cmb = new javax.swing.JComboBox<>();
+        JtxtLogin = new javax.swing.JTextField();
+        JtxtClave = new javax.swing.JPasswordField();
+        btnOjo = new javax.swing.JButton();
+        cmbTipodedocumento = new javax.swing.JComboBox<>();
+        jdcFechadenacimiento = new com.toedter.calendar.JDateChooser();
+        btbIniciar = new javax.swing.JButton();
+
+        jTextField4.setText("jTextField4");
+
+        jPanel1.setBackground(new java.awt.Color(0, 153, 153));
+
+        lblNuevoUsuario.setFont(new java.awt.Font("Segoe UI", 3, 24)); // NOI18N
+        lblNuevoUsuario.setText("Nuevo Usuario");
+
+        lblNombre.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
+        lblNombre.setText("Nombre");
+
+        lblDocumento.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
+        lblDocumento.setText("Documento");
+
+        lblTelefono.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
+        lblTelefono.setText("Telefono");
+
+        lblSexo.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
+        lblSexo.setText("Sexo");
+
+        lblDireccion.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
+        lblDireccion.setText("Direccion");
+
+        lblFechadeNacimiento.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
+        lblFechadeNacimiento.setText("Fecha de Nacimiento");
+
+        lblcargo.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
+        lblcargo.setText("Cargo");
+
+        lblLogin.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
+        lblLogin.setText("Login");
+
+        lblClave.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
+        lblClave.setText("Clave");
+
+        txtNombre.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
+
+        jTextField3.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
+
+        jTextField5.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
+
+        cmbSeleccionesuSexo.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
+        cmbSeleccionesuSexo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Selecione su Sexo", "Masculino", "Femenino", " " }));
+
+        cmb.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
+        cmb.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Selecione Su Cargo", "Aministrador", "Cajero", "Bodeguero" }));
+
+        JtxtLogin.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
+
+        JtxtClave.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
+
+        btnOjo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/ojo-cruzado.png"))); // NOI18N
+
+        cmbTipodedocumento.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
+        cmbTipodedocumento.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Tipo de Documento", "Tarjeta de Identida", "Cedula de Ciudadania", " " }));
+
+        btbIniciar.setFont(new java.awt.Font("Segoe UI", 3, 18)); // NOI18N
+        btbIniciar.setText("Iniciar");
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(26, 26, 26)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(lblNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(lblFechadeNacimiento)
+                                    .addComponent(lblDireccion, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(lblSexo, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(lblTelefono, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(lblDocumento, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(lblLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(lblcargo, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(lblClave, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                            .addComponent(jTextField3)
+                                            .addComponent(jTextField5)
+                                            .addComponent(cmbSeleccionesuSexo, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                            .addComponent(cmb, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                            .addComponent(JtxtLogin)
+                                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                                .addComponent(JtxtClave, javax.swing.GroupLayout.PREFERRED_SIZE, 213, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addGap(18, 18, 18)
+                                                .addComponent(btnOjo, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addComponent(jdcFechadenacimiento, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                        .addGap(13, 13, 13)
+                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(lblNuevoUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 176, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                                .addComponent(txtNombre)
+                                                .addComponent(cmbTipodedocumento, 0, 276, Short.MAX_VALUE))))))))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(208, 208, 208)
+                        .addComponent(btbIniciar)))
+                .addContainerGap(70, Short.MAX_VALUE))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(20, 20, 20)
+                .addComponent(lblNuevoUsuario)
+                .addGap(46, 46, 46)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblNombre)
+                    .addComponent(txtNombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(28, 28, 28)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblDocumento)
+                    .addComponent(cmbTipodedocumento, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(33, 33, 33)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblTelefono)
+                    .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(30, 30, 30)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblSexo)
+                    .addComponent(cmbSeleccionesuSexo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(25, 25, 25)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblDireccion)
+                    .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(27, 27, 27)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lblFechadeNacimiento)
+                    .addComponent(jdcFechadenacimiento, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(28, 28, 28)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblcargo)
+                    .addComponent(cmb, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblLogin)
+                    .addComponent(JtxtLogin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btnOjo)
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(lblClave)
+                        .addComponent(JtxtClave, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 37, Short.MAX_VALUE)
+                .addComponent(btbIniciar)
+                .addContainerGap())
+        );
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 560, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(46, Short.MAX_VALUE)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(30, 30, 30))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 426, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(21, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    public void setDefaultCloseOperation(int DISPOSE_ON_CLOSE) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-
-    public void addWindowListener(WindowAdapter windowAdapter) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-
-    public void setLocationRelativeTo(Object object) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-
-    public Object getJcvsexo() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-
-    public Object getCbxCargo() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPasswordField JtxtClave;
+    private javax.swing.JTextField JtxtLogin;
+    private javax.swing.JButton btbIniciar;
+    private javax.swing.JButton btnOjo;
+    private javax.swing.JComboBox<String> cmb;
+    private javax.swing.JComboBox<String> cmbSeleccionesuSexo;
+    private javax.swing.JComboBox<String> cmbTipodedocumento;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JTextField jTextField3;
+    private javax.swing.JTextField jTextField4;
+    private javax.swing.JTextField jTextField5;
+    private com.toedter.calendar.JDateChooser jdcFechadenacimiento;
+    private javax.swing.JLabel lblClave;
+    private javax.swing.JLabel lblDireccion;
+    private javax.swing.JLabel lblDocumento;
+    private javax.swing.JLabel lblFechadeNacimiento;
+    private javax.swing.JLabel lblLogin;
+    private javax.swing.JLabel lblNombre;
+    private javax.swing.JLabel lblNuevoUsuario;
+    private javax.swing.JLabel lblSexo;
+    private javax.swing.JLabel lblTelefono;
+    private javax.swing.JLabel lblcargo;
+    private javax.swing.JTextField txtNombre;
     // End of variables declaration//GEN-END:variables
 }

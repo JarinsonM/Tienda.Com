@@ -2,6 +2,7 @@ package Modelo;
 
 import Controlador.Conexion;
 import Vista.Login;
+import Vista.Login;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;

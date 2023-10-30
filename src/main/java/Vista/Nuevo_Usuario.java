@@ -24,6 +24,15 @@ public class Nuevo_Usuario extends javax.swing.JPanel {
     public void setBtnOjo(JButton btnOjo) {
         this.btnOjo = btnOjo;
     }
+
+    public JButton getBtbIniciar() {
+        return btbIniciar;
+    }
+
+    public void setBtbIniciar(JButton btbIniciar) {
+        this.btbIniciar = btbIniciar;
+    }
+    
     
     
 
@@ -257,4 +266,24 @@ public class Nuevo_Usuario extends javax.swing.JPanel {
     private javax.swing.JLabel lblcargo;
     private javax.swing.JTextField txtNombre;
     // End of variables declaration//GEN-END:variables
+
+    public void addWindowListener(WindowAdapter windowAdapter) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+    public void setLocationRelativeTo(Object object) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+    public Object getjcbBoxselec_sexo() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+    public Object getjComboBoxcargo() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+    public Object getjCbBoxselec_sexo() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
 }

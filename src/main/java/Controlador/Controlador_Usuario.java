@@ -8,13 +8,12 @@ import java.awt.event.WindowEvent;
 import java.util.Map;
 import Vista.Principal;
 import Vista.Login;
-import Vista.Nuevo_Usuario;
 
 public class Controlador_Usuario implements ActionListener {
 
-    Nuevo_Usuario Usu = new Nuevo_Usuario();
+    Usuarios Usu = new Usuarios();
     Principal pri = new Principal();
-    modelo_Usuario mode_Usu = new modelo_Usuario();
+    modelo_Usuario mode_Usu = new Usuario();
 
     public void controUsuario() {
 
@@ -51,8 +50,7 @@ public class Controlador_Usuario implements ActionListener {
 
     }
 
-    
-    public void actionperformed(ActionEvent e) {
+    public void actionperformed(ActionEvent y) {
         if (y.getSource().equals(Usu.getjButtoguardar())) {
             if (((Usu.getjTextinsert_Usuario.getText().isEmpty()) || (Usu.getjTextier_nombre().getText().isEmpty)
                     || (Usu.getjTextinsert_telefono().getText().isEmpty())
@@ -70,7 +68,7 @@ public class Controlador_Usuario implements ActionListener {
             String valorSexo = Usu.getjCbBoxselec_sexo().getSelectedItem().toString();
             String valorCargo = Usu.getjComboBoxcargo().getSelectedItem().toString();
 
-            int Sexo = mode_Usu.llenarCombo("Sexo").get(varlorSexo);
+            int Sexo = mode_Usu.llenarCombo("Sexo").get(valorSexo);
             int Cargo = mode_Usu.llenarCombo("Cargo").get(valorCargo);
         }
     }
@@ -79,8 +77,6 @@ public class Controlador_Usuario implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
-
-
 
    
     

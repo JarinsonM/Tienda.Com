@@ -1,4 +1,4 @@
- package Modelo;
+package Modelo;
 
 import Controlador.Conexion;
 import com.toedter.calendar.JDateChooser;
@@ -29,6 +29,7 @@ public class ModeloUsuario {
     private int doc, sex, rol, Tip;
     private String nom, dir, tec, cor, lo, cl;
     private Date fec;
+    private String sql;
 
     public Conexion getCone() {
         return cone;
@@ -285,7 +286,7 @@ public class ModeloUsuario {
         }
     }
 
-    public String obtenerSeleccion(Map<String, Integer> dato, int valor) { 
+    public String obtenerSeleccion(Map<String, Integer> dato, int valor) {
         for (Map.Entry<String, Integer> seleccion : dato.entrySet()) {
             if (seleccion.getValue() == valor) {
                 return seleccion.getKey();
@@ -294,10 +295,30 @@ public class ModeloUsuario {
         return null;
     }
 
-    private static abstract class Gestion_Encabezado implements TableCellRenderer {
+    public void actualizar() {
+        Conexion conet = new Conexion();
+        Connection con = conet.iniciarConexion();
 
-        public Gestion_Encabezado() {
+        String sql = "call actu_usuario(?,?,?,?,?,?,?,?,?)";
+        try {
+            PreparedStatement ps = con.prepareStatement(sql);
+            ps.setInt(1, getDoc());
+            ps.setString(2, getNom());
+            ps.setInt(3, getRol());
+            ps.setString(4, getTec());
+            ps.setString(5, getCor());
+            ps.setString(6, getDir());
+            ps.setInt(7, getSex());
+            ps.setDate(8, getFec());
+            ps.setString(9, getCl());
+            ps.executeUpdate();
+            
+            JOptionPane.showMessageDialog(null, "Registro almacenado");
+            con.close();
+            
+        } catch (SQLException e) {
+            e.printStackTrace();
         }
     }
 
-}    
+}

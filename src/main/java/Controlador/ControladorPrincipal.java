@@ -24,7 +24,9 @@ public class ControladorPrincipal implements ActionListener{
     public ControladorPrincipal() {
         prin.getBtnNuevo().addActionListener(this);//Agrega el boton nuevo para que se escuche cuando se de clic
         nuevo.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);//Desactiva la x que cierrar el programa para que permita abrir o volver a la ventana principal
+        prin.getBtnNuevoCliente().
     }
+   
 
     public void iniciar() {
         prin.setLocationRelativeTo(null);//Centra la ventana

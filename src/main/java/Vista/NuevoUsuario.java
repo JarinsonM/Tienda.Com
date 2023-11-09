@@ -1,10 +1,13 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
+ */
 package Vista;
 
 import com.toedter.calendar.JDateChooser;
-import java.awt.event.WindowAdapter;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
-import javax.swing.JLabel;
+import javax.swing.JPanel;
 import javax.swing.JPasswordField;
 import javax.swing.JTextField;
 
@@ -12,21 +15,61 @@ import javax.swing.JTextField;
  *
  * @author SENA
  */
-public class Nuevo_Usuario extends javax.swing.JPanel {
+public class NuevoUsuario extends javax.swing.JFrame {
 
     /**
-     * Creates new form Nuevo_Usuario
+     * Creates new form NuevoUsuario
      */
-    public Nuevo_Usuario() {
+    public NuevoUsuario() {
         initComponents();
     }
 
-    public JButton getBtnOjo() {
-        return btnOjo;
+    public JComboBox<String> getCmbCargo() {
+        return CmbCargo;
     }
 
-    public void setBtnOjo(JButton btnOjo) {
-        this.btnOjo = btnOjo;
+    public void setCmbCargo(JComboBox<String> CmbCargo) {
+        this.CmbCargo = CmbCargo;
+    }
+
+    public JPanel getJPL() {
+        return JPL;
+    }
+
+    public void setJPL(JPanel JPL) {
+        this.JPL = JPL;
+    }
+
+    public JDateChooser getJdcFechadenacimiento() {
+        return JdcFechadenacimiento;
+    }
+
+    public void setJdcFechadenacimiento(JDateChooser JdcFechadenacimiento) {
+        this.JdcFechadenacimiento = JdcFechadenacimiento;
+    }
+
+    public JPasswordField getJtxtClave() {
+        return JtxtClave;
+    }
+
+    public void setJtxtClave(JPasswordField JtxtClave) {
+        this.JtxtClave = JtxtClave;
+    }
+
+    public JTextField getTxtDireccion() {
+        return TxtDireccion;
+    }
+
+    public void setTxtDireccion(JTextField TxtDireccion) {
+        this.TxtDireccion = TxtDireccion;
+    }
+
+    public JTextField getTxtTelefono() {
+        return TxtTelefono;
+    }
+
+    public void setTxtTelefono(JTextField TxtTelefono) {
+        this.TxtTelefono = TxtTelefono;
     }
 
     public JButton getBtbIniciar() {
@@ -35,6 +78,30 @@ public class Nuevo_Usuario extends javax.swing.JPanel {
 
     public void setBtbIniciar(JButton btbIniciar) {
         this.btbIniciar = btbIniciar;
+    }
+
+    public JButton getBtnCancelar() {
+        return btnCancelar;
+    }
+
+    public void setBtnCancelar(JButton btnCancelar) {
+        this.btnCancelar = btnCancelar;
+    }
+
+    public JButton getBtnGuardar() {
+        return btnGuardar;
+    }
+
+    public void setBtnGuardar(JButton btnGuardar) {
+        this.btnGuardar = btnGuardar;
+    }
+
+    public JButton getBtnOjo() {
+        return btnOjo;
+    }
+
+    public void setBtnOjo(JButton btnOjo) {
+        this.btnOjo = btnOjo;
     }
 
     public JComboBox<String> getCmbSeleccionesuSexo() {
@@ -53,84 +120,12 @@ public class Nuevo_Usuario extends javax.swing.JPanel {
         this.cmbTipodedocumento = cmbTipodedocumento;
     }
 
-    public JPasswordField getJtxtClave() {
-        return JtxtClave;
-    }
-
-    public void setJtxtClave(JPasswordField JtxtClave) {
-        this.JtxtClave = JtxtClave;
-    }
-
-    public JTextField getTxtNombre() {
-        return txtNombre;
-    }
-
-    public void setTxtNombre(JTextField txtNombre) {
-        this.txtNombre = txtNombre;
-    }
-
-    public JComboBox<String> getCmb() {
-        return CmbCargo;
-    }
-
-    public void setCmb(JComboBox<String> cmb) {
-        this.CmbCargo = cmb;
-    }
-
-    public JDateChooser getJdcFechadenacimiento() {
-        return JdcFechadenacimiento;
-    }
-
-    public void setJdcFechadenacimiento(JDateChooser jdcFechadenacimiento) {
-        this.JdcFechadenacimiento = jdcFechadenacimiento;
-    }
-
-    public JTextField getTxtTelefono() {
-        return TxtTelefono;
-    }
-
-    public void setTxtTelefono(JTextField TxtTelefono) {
-        this.TxtTelefono = TxtTelefono;
-    }
-
-    public JButton getBtnGuardar() {
-        return btnGuardar;
-    }
-
-    public void setBtnGuardar(JButton btnGuardar) {
-        this.btnGuardar = btnGuardar;
-    }
-
-    public JTextField getTxtDireccion() {
-        return TxtDireccion;
-    }
-
-    public void setTxtDireccion(JTextField TxtDireccion) {
-        this.TxtDireccion = TxtDireccion;
-    }
-
     public JTextField getTxtCorreo() {
         return txtCorreo;
     }
 
     public void setTxtCorreo(JTextField txtCorreo) {
         this.txtCorreo = txtCorreo;
-    }
-
-    public JTextField getJtxtLogin() {
-        return txtLogin;
-    }
-
-    public void setJtxtLogin(JTextField JtxtLogin) {
-        this.txtLogin = JtxtLogin;
-    }
-
-    public JComboBox<String> getCmbCargo() {
-        return CmbCargo;
-    }
-
-    public void setCmbCargo(JComboBox<String> CmbCargo) {
-        this.CmbCargo = CmbCargo;
     }
 
     public JTextField getTxtLogin() {
@@ -141,6 +136,15 @@ public class Nuevo_Usuario extends javax.swing.JPanel {
         this.txtLogin = txtLogin;
     }
 
+    public JTextField getTxtNombre() {
+        return txtNombre;
+    }
+
+    public void setTxtNombre(JTextField txtNombre) {
+        this.txtNombre = txtNombre;
+    }
+    
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -150,7 +154,6 @@ public class Nuevo_Usuario extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jTextField4 = new javax.swing.JTextField();
         JPL = new javax.swing.JPanel();
         lblNuevoUsuario = new javax.swing.JLabel();
         lblNombre = new javax.swing.JLabel();
@@ -178,7 +181,7 @@ public class Nuevo_Usuario extends javax.swing.JPanel {
         lblCorreo = new javax.swing.JLabel();
         txtCorreo = new javax.swing.JTextField();
 
-        jTextField4.setText("jTextField4");
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         JPL.setBackground(new java.awt.Color(0, 153, 153));
 
@@ -367,12 +370,12 @@ public class Nuevo_Usuario extends javax.swing.JPanel {
                 .addGap(16, 16, 16))
         );
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(38, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(JPL, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(30, 30, 30))
         );
@@ -383,15 +386,17 @@ public class Nuevo_Usuario extends javax.swing.JPanel {
                 .addComponent(JPL, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
-    }// </editor-fold>//GEN-END:initComponents
 
-    private void cmbTipodedocumentoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmbTipodedocumentoActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cmbTipodedocumentoActionPerformed
+        pack();
+    }// </editor-fold>//GEN-END:initComponents
 
     private void cmbSeleccionesuSexoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmbSeleccionesuSexoActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_cmbSeleccionesuSexoActionPerformed
+
+    private void cmbTipodedocumentoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmbTipodedocumentoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cmbTipodedocumentoActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -407,7 +412,6 @@ public class Nuevo_Usuario extends javax.swing.JPanel {
     private javax.swing.JButton btnOjo;
     private javax.swing.JComboBox<String> cmbSeleccionesuSexo;
     private javax.swing.JComboBox<String> cmbTipodedocumento;
-    private javax.swing.JTextField jTextField4;
     private javax.swing.JLabel lblClave;
     private javax.swing.JLabel lblCorreo;
     private javax.swing.JLabel lblDireccion;
@@ -423,5 +427,4 @@ public class Nuevo_Usuario extends javax.swing.JPanel {
     private javax.swing.JTextField txtLogin;
     private javax.swing.JTextField txtNombre;
     // End of variables declaration//GEN-END:variables
-
 }

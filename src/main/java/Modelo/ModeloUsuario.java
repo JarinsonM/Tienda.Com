@@ -194,17 +194,17 @@ public class ModeloUsuario {
         }
     }
 
-    public void mostrarTablaUsuario(JTable tabla, String valor) {
+    public void mostrarTablaUsuario(JTable tabla, String valor, String NomPesta) {
         Conexion conect = new Conexion();
         Connection co = conect.iniciarConexion();
 
         //Personalizar Emcabezado
         JTableHeader encabeza = tabla.getTableHeader();
-        encabeza.setDefaultRenderer(new Gestion_Encabezado() {
-            @Override
-            public Component getTableCellRendererComponent(JTable table, Object value, boolean isSelected, boolean hasFocus, int row, int column) {
-                throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-            }
+        encabeza.setDefaultRenderer(new GestionEncabezado() {
+            
+            
+            
+           
         });
         tabla.setTableHeader(encabeza);
 

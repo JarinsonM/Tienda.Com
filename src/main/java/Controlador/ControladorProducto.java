@@ -17,8 +17,8 @@ public class ControladorProducto implements ActionListener {
     Modelo_Producto modproduc = new Modelo_Producto();
 
     public ControladorProducto() {
-        pro.getBtnbuscarimagen().addActionListener(this);
-        pro.getBtnguardproduct().addActionListener(this);
+        pro.getTxtborroImagen().addActionListener(this);
+        pro.getTxtNuevo_Producto().addActionListener(this);
         pro.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         pro.addWindowListener(new WindowAdapter() {
             public void windowClosed(WindowEvent e) {
@@ -38,19 +38,19 @@ public class ControladorProducto implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
 
-        if (e.getSource().equals(pro.getBtnbuscarimagen())) {
-            modproduc.buscarImagen();
+        if (e.getSource().equals(pro.getTxtborroImagen())) {
+            modproduc.getImagen();
             File file = new File(modproduc.getRuta());
             String archivo = file.getName();//obtiene solo el nombre de la ruta
-            pro.getTxtimagenproduc().setText(archivo);
+            pro.getTxtborroImagen().setText(archivo);
         }
-        if (e.getSource().equals(pro.getBtnguardproduct())) {
-            modproduc.setNom(pro.getTxtnombreproduc().getText());
-            modproduc.setDescri(pro.getTexareadescripproduct().getText());
-            modproduc.setImagen(modproduc.convertirImagen(modproduc.getRuta()));
-            modproduc.insertarProducto();
-            modproduc.limpiar(pro.getPanelProducto().getComponents());
+        if (e.getSource().equals(pro.getTxtNuevo_Producto())) {
+            modproduc.setDes(pro.getTxtNuevo_Producto().getText());
+            modproduc.setDes(pro.getTxtborroDescripcion().getText());
+            modproduc.setImagen(modproduc.getImagen());
+            modproduc.insertarproducto();
+            modproduc.LimpiarProducto(pro.getJPLProducto().getComponents());
         }
-
     }
+}
 

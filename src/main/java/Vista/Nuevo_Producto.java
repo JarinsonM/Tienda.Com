@@ -4,6 +4,9 @@
  */
 package Vista;
 
+import javax.swing.JPanel;
+import javax.swing.JTextField;
+
 /**
  *
  * @author SENA
@@ -17,6 +20,46 @@ public class Nuevo_Producto extends javax.swing.JFrame {
         initComponents();
     }
 
+    public JPanel getJPLProducto() {
+        return JPLProducto;
+    }
+
+    public void setJPLProducto(JPanel JPLProducto) {
+        this.JPLProducto = JPLProducto;
+    }
+
+    public JTextField getTxtNuevo_Producto() {
+        return Nuevo_Producto;
+    }
+
+    public void setTxtNuevo_Producto(JTextField TxtNuevo_Producto) {
+        this.Nuevo_Producto = TxtNuevo_Producto;
+    }
+
+    public JTextField getTxtborroDescripcion() {
+        return TxtborroDescripcion;
+    }
+
+    public void setTxtborroDescripcion(JTextField TxtborroDescripcion) {
+        this.TxtborroDescripcion = TxtborroDescripcion;
+    }
+
+    public JTextField getTxtborroImagen() {
+        return TxtborroImagen;
+    }
+
+    public void setTxtborroImagen(JTextField TxtborroImagen) {
+        this.TxtborroImagen = TxtborroImagen;
+    }
+
+    public JTextField getTxtborroNombre() {
+        return TxtborroNombre;
+    }
+
+    public void setTxtborroNombre(JTextField TxtborroNombre) {
+        this.TxtborroNombre = TxtborroNombre;
+    }
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -27,24 +70,25 @@ public class Nuevo_Producto extends javax.swing.JFrame {
     private void initComponents() {
 
         jTextField1 = new javax.swing.JTextField();
-        jPanel1 = new javax.swing.JPanel();
-        jTextField2 = new javax.swing.JTextField();
+        Nuevo_Producto = new javax.swing.JTextField();
+        JPLProducto = new javax.swing.JPanel();
         lblNombre = new javax.swing.JLabel();
         lblImagen = new javax.swing.JLabel();
         lblDescripcion = new javax.swing.JLabel();
-        txt = new javax.swing.JTextField();
-        jTextField4 = new javax.swing.JTextField();
-        jTextField5 = new javax.swing.JTextField();
+        TxtborroNombre = new javax.swing.JTextField();
+        TxtborroImagen = new javax.swing.JTextField();
+        TxtborroDescripcion = new javax.swing.JTextField();
+        lblNuevoproducto = new javax.swing.JLabel();
 
         jTextField1.setText("jTextField1");
 
+        Nuevo_Producto.setFont(new java.awt.Font("Segoe UI", 3, 18)); // NOI18N
+        Nuevo_Producto.setForeground(new java.awt.Color(0, 204, 255));
+        Nuevo_Producto.setText("Nuevo Producto");
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel1.setBackground(new java.awt.Color(0, 153, 153));
-
-        jTextField2.setFont(new java.awt.Font("Segoe UI", 3, 18)); // NOI18N
-        jTextField2.setForeground(new java.awt.Color(0, 204, 255));
-        jTextField2.setText("Nuevo Producto");
+        JPLProducto.setBackground(new java.awt.Color(0, 153, 153));
 
         lblNombre.setFont(new java.awt.Font("Segoe UI", 3, 18)); // NOI18N
         lblNombre.setText("Nombre");
@@ -55,58 +99,60 @@ public class Nuevo_Producto extends javax.swing.JFrame {
         lblDescripcion.setFont(new java.awt.Font("Segoe UI", 3, 18)); // NOI18N
         lblDescripcion.setText("Descripcion");
 
-        jTextField4.addActionListener(new java.awt.event.ActionListener() {
+        TxtborroImagen.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField4ActionPerformed(evt);
+                TxtborroImagenActionPerformed(evt);
             }
         });
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(27, 27, 27)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(lblNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(txt, javax.swing.GroupLayout.PREFERRED_SIZE, 261, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(lblImagen, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(42, 42, 42)
-                                .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 261, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(17, 17, 17)
-                        .addComponent(lblDescripcion)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(76, 76, 76)
-                                .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, 261, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+        lblNuevoproducto.setFont(new java.awt.Font("Segoe UI", 3, 24)); // NOI18N
+        lblNuevoproducto.setText("Nuevo Producto");
+
+        javax.swing.GroupLayout JPLProductoLayout = new javax.swing.GroupLayout(JPLProducto);
+        JPLProducto.setLayout(JPLProductoLayout);
+        JPLProductoLayout.setHorizontalGroup(
+            JPLProductoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(JPLProductoLayout.createSequentialGroup()
+                .addGroup(JPLProductoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(JPLProductoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addGroup(JPLProductoLayout.createSequentialGroup()
+                            .addGap(27, 27, 27)
+                            .addGroup(JPLProductoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                .addGroup(JPLProductoLayout.createSequentialGroup()
+                                    .addComponent(lblNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(TxtborroNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 261, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(JPLProductoLayout.createSequentialGroup()
+                                    .addComponent(lblImagen, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGap(42, 42, 42)
+                                    .addComponent(TxtborroImagen, javax.swing.GroupLayout.PREFERRED_SIZE, 261, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addGroup(JPLProductoLayout.createSequentialGroup()
+                            .addGap(17, 17, 17)
+                            .addComponent(lblDescripcion)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(TxtborroDescripcion, javax.swing.GroupLayout.PREFERRED_SIZE, 261, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(JPLProductoLayout.createSequentialGroup()
+                        .addGap(171, 171, 171)
+                        .addComponent(lblNuevoproducto)))
                 .addContainerGap(88, Short.MAX_VALUE))
         );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(23, 23, 23)
-                .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(50, 50, 50)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblNombre)
-                    .addComponent(txt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+        JPLProductoLayout.setVerticalGroup(
+            JPLProductoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(JPLProductoLayout.createSequentialGroup()
                 .addGap(30, 30, 30)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addComponent(lblNuevoproducto)
+                .addGap(58, 58, 58)
+                .addGroup(JPLProductoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblNombre)
+                    .addComponent(TxtborroNombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(30, 30, 30)
+                .addGroup(JPLProductoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblImagen)
-                    .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(TxtborroImagen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 62, Short.MAX_VALUE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(JPLProductoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(lblDescripcion, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jTextField5, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(TxtborroDescripcion, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(107, 107, 107))
         );
 
@@ -115,36 +161,37 @@ public class Nuevo_Producto extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(37, 37, 37)
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(21, 21, 21)
+                .addComponent(JPLProducto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(22, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(30, 30, 30)
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(16, 16, 16)
+                .addComponent(JPLProducto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jTextField4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField4ActionPerformed
+    private void TxtborroImagenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TxtborroImagenActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField4ActionPerformed
+    }//GEN-LAST:event_TxtborroImagenActionPerformed
 
   
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel JPLProducto;
+    private javax.swing.JTextField Nuevo_Producto;
+    private javax.swing.JTextField TxtborroDescripcion;
+    private javax.swing.JTextField TxtborroImagen;
+    private javax.swing.JTextField TxtborroNombre;
     private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField4;
-    private javax.swing.JTextField jTextField5;
     private javax.swing.JLabel lblDescripcion;
     private javax.swing.JLabel lblImagen;
     private javax.swing.JLabel lblNombre;
-    private javax.swing.JTextField txt;
+    private javax.swing.JLabel lblNuevoproducto;
     // End of variables declaration//GEN-END:variables
 }

@@ -4,6 +4,11 @@
  */
 package Vista;
 
+import javax.swing.JButton;
+import javax.swing.JPanel;
+import javax.swing.JPasswordField;
+import javax.swing.JTextField;
+
 /**
  *
  * @author SENA
@@ -29,12 +34,12 @@ public class Login extends javax.swing.JFrame {
         JPLlogin = new javax.swing.JPanel();
         lblIniciarSesion = new javax.swing.JLabel();
         lblUsuario = new javax.swing.JLabel();
-        txt = new javax.swing.JTextField();
+        TxtborroUsuario = new javax.swing.JTextField();
         lblContraseña = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
         lbl = new javax.swing.JLabel();
         btnIniciar = new javax.swing.JButton();
-        lblmostrar = new javax.swing.JLabel();
+        btnOjo = new javax.swing.JButton();
+        PsfContraseña = new javax.swing.JPasswordField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -54,13 +59,25 @@ public class Login extends javax.swing.JFrame {
         btnIniciar.setFont(new java.awt.Font("Segoe UI", 3, 24)); // NOI18N
         btnIniciar.setText("Iniciar");
 
-        lblmostrar.setFont(new java.awt.Font("Segoe UI", 3, 18)); // NOI18N
-        lblmostrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/ojo-cruzado.png"))); // NOI18N
+        btnOjo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/ojo.png"))); // NOI18N
 
         javax.swing.GroupLayout JPLloginLayout = new javax.swing.GroupLayout(JPLlogin);
         JPLlogin.setLayout(JPLloginLayout);
         JPLloginLayout.setHorizontalGroup(
             JPLloginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(JPLloginLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(JPLloginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lblUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblContraseña))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 30, Short.MAX_VALUE)
+                .addGroup(JPLloginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(TxtborroUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 198, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(JPLloginLayout.createSequentialGroup()
+                        .addComponent(PsfContraseña, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(btnOjo, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(58, 58, 58))
             .addGroup(JPLloginLayout.createSequentialGroup()
                 .addGroup(JPLloginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(JPLloginLayout.createSequentialGroup()
@@ -68,20 +85,8 @@ public class Login extends javax.swing.JFrame {
                         .addComponent(lblIniciarSesion))
                     .addGroup(JPLloginLayout.createSequentialGroup()
                         .addGap(166, 166, 166)
-                        .addComponent(lbl))
-                    .addGroup(JPLloginLayout.createSequentialGroup()
-                        .addContainerGap()
-                        .addGroup(JPLloginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(lblUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(lblContraseña))
-                        .addGap(32, 32, 32)
-                        .addGroup(JPLloginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, JPLloginLayout.createSequentialGroup()
-                                .addComponent(jTextField1)
-                                .addGap(18, 18, 18)
-                                .addComponent(lblmostrar))
-                            .addComponent(txt, javax.swing.GroupLayout.PREFERRED_SIZE, 198, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(56, Short.MAX_VALUE))
+                        .addComponent(lbl)))
+                .addContainerGap())
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, JPLloginLayout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
                 .addComponent(btnIniciar)
@@ -97,13 +102,13 @@ public class Login extends javax.swing.JFrame {
                 .addGap(23, 23, 23)
                 .addGroup(JPLloginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblUsuario)
-                    .addComponent(txt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(TxtborroUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(86, 86, 86)
-                .addGroup(JPLloginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(JPLloginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(lblContraseña)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblmostrar))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 23, Short.MAX_VALUE)
+                    .addComponent(btnOjo, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 26, Short.MAX_VALUE)
+                    .addComponent(PsfContraseña, javax.swing.GroupLayout.Alignment.TRAILING))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 24, Short.MAX_VALUE)
                 .addComponent(btnIniciar)
                 .addGap(35, 35, 35))
         );
@@ -113,32 +118,67 @@ public class Login extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(40, 40, 40)
                 .addComponent(JPLlogin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(83, Short.MAX_VALUE))
+                .addGap(0, 6, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(25, 25, 25)
-                .addComponent(JPLlogin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(18, Short.MAX_VALUE))
+            .addComponent(JPLlogin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    public JPanel getJPLlogin() {
+        return JPLlogin;
+    }
+
+    public void setJPLlogin(JPanel JPLlogin) {
+        this.JPLlogin = JPLlogin;
+    }
+
+    public JPasswordField getPsfContraseña() {
+        return PsfContraseña;
+    }
+
+    public void setPsfContraseña(JPasswordField PsfContraseña) {
+        this.PsfContraseña = PsfContraseña;
+    }
+
+    public JTextField getTxtborroUsuario() {
+        return TxtborroUsuario;
+    }
+
+    public void setTxtborroUsuario(JTextField TxtborroUsuario) {
+        this.TxtborroUsuario = TxtborroUsuario;
+    }
+
+    public JButton getBtnIniciar() {
+        return btnIniciar;
+    }
+
+    public void setBtnIniciar(JButton btnIniciar) {
+        this.btnIniciar = btnIniciar;
+    }
+
+    public JButton getBtnOjo() {
+        return btnOjo;
+    }
+
+    public void setBtnOjo(JButton btnOjo) {
+        this.btnOjo = btnOjo;
+    }
  
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel JPLlogin;
+    private javax.swing.JPasswordField PsfContraseña;
+    private javax.swing.JTextField TxtborroUsuario;
     private javax.swing.JButton btnIniciar;
-    private javax.swing.JTextField jTextField1;
+    private javax.swing.JButton btnOjo;
     private javax.swing.JLabel lbl;
     private javax.swing.JLabel lblContraseña;
     private javax.swing.JLabel lblIniciarSesion;
     private javax.swing.JLabel lblUsuario;
-    private javax.swing.JLabel lblmostrar;
-    private javax.swing.JTextField txt;
     // End of variables declaration//GEN-END:variables
 }

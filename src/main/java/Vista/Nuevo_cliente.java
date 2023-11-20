@@ -103,6 +103,14 @@ public class Nuevo_cliente extends javax.swing.JFrame {
         this.txtnombre = txtnombre;
     }
 
+    public JPanel getjPl() {
+        return jPl;
+    }
+
+    public void setjPl(JPanel jPl) {
+        this.jPl = jPl;
+    }
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -113,7 +121,7 @@ public class Nuevo_cliente extends javax.swing.JFrame {
     private void initComponents() {
 
         jPl = new javax.swing.JPanel();
-        lbl = new javax.swing.JLabel();
+        lblNuevoCliente = new javax.swing.JLabel();
         lblDocumento = new javax.swing.JLabel();
         lblNombre = new javax.swing.JLabel();
         txtDocumento = new javax.swing.JTextField();
@@ -136,14 +144,20 @@ public class Nuevo_cliente extends javax.swing.JFrame {
 
         jPl.setBackground(new java.awt.Color(0, 102, 102));
 
-        lbl.setFont(new java.awt.Font("Segoe UI", 3, 18)); // NOI18N
-        lbl.setText("Nuevo Cliente");
+        lblNuevoCliente.setFont(new java.awt.Font("Segoe UI", 3, 18)); // NOI18N
+        lblNuevoCliente.setText("Nuevo Cliente");
 
         lblDocumento.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
         lblDocumento.setText("Documento");
 
         lblNombre.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
         lblNombre.setText("Nombre");
+
+        txtDocumento.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtDocumentoActionPerformed(evt);
+            }
+        });
 
         lblTelefono.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
         lblTelefono.setText("Telefono");
@@ -190,7 +204,7 @@ public class Nuevo_cliente extends javax.swing.JFrame {
             jPlLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPlLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(lbl)
+                .addComponent(lblNuevoCliente)
                 .addGap(214, 214, 214))
             .addGroup(jPlLayout.createSequentialGroup()
                 .addGap(57, 57, 57)
@@ -237,7 +251,7 @@ public class Nuevo_cliente extends javax.swing.JFrame {
             jPlLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPlLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(lbl, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(lblNuevoCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(42, 42, 42)
                 .addGroup(jPlLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblDocumento)
@@ -302,6 +316,10 @@ public class Nuevo_cliente extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtcorreoActionPerformed
 
+    private void txtDocumentoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtDocumentoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtDocumentoActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -353,12 +371,12 @@ public class Nuevo_cliente extends javax.swing.JFrame {
     private javax.swing.JButton btnGuardar;
     private javax.swing.JButton btnIniciar;
     private javax.swing.JPanel jPl;
-    private javax.swing.JLabel lbl;
     private javax.swing.JLabel lblCorreo;
     private javax.swing.JLabel lblDireccion;
     private javax.swing.JLabel lblDocumento;
     private javax.swing.JLabel lblFechaDeNacimiento;
     private javax.swing.JLabel lblNombre;
+    private javax.swing.JLabel lblNuevoCliente;
     private javax.swing.JLabel lblSexo;
     private javax.swing.JLabel lblTelefono;
     private javax.swing.JTextField txtDocumento;

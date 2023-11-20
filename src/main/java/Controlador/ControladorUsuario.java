@@ -1,7 +1,7 @@
 package Controlador;
 
 import Modelo.ModeloUsuario;
-import Vista.NuevoUsuario;
+import Vista.Nuevo_Usuario;
 import Vista.Principal;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -16,7 +16,7 @@ import javax.swing.border.Border;
 
 public class ControladorUsuario implements ActionListener {
 
-    NuevoUsuario usu = new NuevoUsuario();
+    Nuevo_Usuario usu = new Nuevo_Usuario();
     Principal prin = new Principal();
     ModeloUsuario modusuario = new ModeloUsuario();
 
@@ -68,7 +68,7 @@ public class ControladorUsuario implements ActionListener {
         }
         if (e.getSource().equals(usu.getBtnGuardar())) {
             //validar campos vacios
-            if ((usu.getCmbTipodedocumento().getText().isEmpty()) || (usu.getCmbTipodedocumento().getSelectedItem().equals("Seleccione...")) || (usu.getTxtNombre().getText().isEmpty()) || (usu.getTxtDireccion().getText().isEmpty())
+            if ( (usu.getCmbTipodedocumento().getSelectedItem().equals("Seleccione...")) || (usu.getTxtNombre().getText().isEmpty()) || (usu.getTxtDireccion().getText().isEmpty())
                     || (usu.getTxtCorreo().getText().isEmpty()) || (usu.getTxtLogin().getText().isEmpty()) || (usu.getTxtTelefono().getText().isEmpty())
                     || (usu.getJtxtClave().getPassword() == null) || (usu.getJdcFechadenacimiento().getDate() == null) || (usu.getCmbCargo().getSelectedItem().equals("Seleccione..."))
                     || (usu.getCmbSeleccionesuSexo().getSelectedItem().equals("Seleccione..."))) {
@@ -89,7 +89,6 @@ public class ControladorUsuario implements ActionListener {
                 char[] contra = usu.getJtxtClave().getPassword();
                 String contrasena = String.valueOf(contra);
 
-                modusuario.setDoc(Integer.parseInt(usu.getCmbTipodedocumento().getText()));
                 modusuario.setCmbTipodedocumento(usu.getCmbTipodedocumento().getSelectedItem().toString());
                 modusuario.setNom(usu.getTxtNombre().getText());
                 modusuario.setDir(usu.getTxtDireccion().getText());
@@ -103,13 +102,11 @@ public class ControladorUsuario implements ActionListener {
 
                 if (usu.getBtnGuardar().getText().equals("Guardar")) {
                     modusuario.insertarUsuario();
-                    modusuario.limpiar(usu.getUsuarios().getComponents());
+                    modusuario.Limpiar(usu.getJPL().getComponents());
                 } else {
                     modusuario.actualizarUsuario();
                     usu.setVisible(false);
-                    prin.setVisible(true);
-                    modusuario.mostrarTablaUsuario(prin.getJtusuario(), "", "Usuario");
-//                    prin.getTpPrincipal().setSelectedIndex(0);
+                    prin.dispose();
                 }
 
             }
@@ -123,7 +120,7 @@ public class ControladorUsuario implements ActionListener {
         usu.getCmbTipodedocumento().setEnabled(false);
         usu.getTxtLogin().setEnabled(false);
         usu.getCmbTipodedocumento().setEnabled(false);
-        usu.getCmbTipodedocumento().setText(String.valueOf(doc));
+        usu.getCmbTipodedocumento().setSelectedItem(String.valueOf(doc));
         usu.getTxtNombre().setText(modusuario.getNom());
         usu.getTxtTelefono().setText(modusuario.getTec());
         usu.getTxtCorreo().setText(modusuario.getCor());
@@ -159,7 +156,7 @@ public class ControladorUsuario implements ActionListener {
                 javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION,
                 new java.awt.Font("Yu Gothic UI", 1, 36),
                 new java.awt.Color(204, 0, 204));
-        usu.getUsuarios().setBorder(borde);
+        usu.getJPL().setBorder(borde);
         prin.setVisible(false);
         usu.setLocationRelativeTo(null);
         usu.getBtnGuardar().setText("Actualizar");

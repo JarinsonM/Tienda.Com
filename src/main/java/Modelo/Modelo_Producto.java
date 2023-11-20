@@ -1,7 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package Modelo;
 
 import Controlador.Conexion;
@@ -13,10 +10,6 @@ import java.io.InputStream;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
-import java.swing.JFileChooser;
-import java.swing.JOptionPane;
-import java.swing.JTextField;
-import java.swing.filechooser.FileNameExtensionFilter;
 import javax.swing.JFileChooser;
 import javax.swing.JOptionPane;
 import javax.swing.JScrollPane;
@@ -87,7 +80,7 @@ public class Modelo_Producto {
        }
     
     }
-    public void insertarproducto() throws SQLException{
+    public void insertarproducto() {
        Conexion con =new Conexion();
        Connection cn =(Connection) con.iniciarConexion();
            
